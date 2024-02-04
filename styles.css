@@ -1,7 +1,8 @@
 html,
 
 :root {
-    --base-color: #4189b8;
+    --base-color: 202, 100%, 20%;
+    --base-color-paragraph: 200, 70%, 60%;
 }
 body {
     margin: 0;
@@ -12,21 +13,20 @@ body {
 .wrapper {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
 }
 
 header {
-    background-color: var(--base-color);
+    background-color: hsl(var(--base-color), 95%);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 nav {
     display: flex;
     align-items: center;
     padding: 10px;
-
 }
 
 nav ul {
@@ -37,51 +37,60 @@ nav ul {
 }
 
 nav li {
-    margin-right: 10px;
+    margin-right: 15px;
     margin-left:0;
 }
 
-nav a {
+nav ul li a {
     text-decoration: none;
-    color: #7db4d8;
-    border-radius: 4px;
-    padding: 8px;
-    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.514);
-    transition: all 1.0 ease-in-out;
-    justify-content: space-around;
-    
-}
+    color: hsl(var(--base-color), 60%);
+    padding: 8px 15px;
+    padding-top: 5px;
+    padding-bottom:5px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 3px rgba(41, 41, 41, 0.711);
+    transition: all 0.3s ease;
+    display: block;
+  }
+  
 
-nav a:hover {
+nav ul li a:hover {
     color: white;
     background-color: #12273c;
-    transition: all 0.3 ease-in-out;
-    transform: scale(1.5,1.5);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
+    transform: scale(1.2) translateY(-5px);
+    transition: all 0.5s ease;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5.14);
 
-nav:hover::after {
-    opacity: 1;
 }
-
 .content-section {
-    margin-top: 0;
-    padding: 10px;
-    color: #12273c;
+    margin-top: 20px;
+    padding: 0;
+    color: hsl(var(--base-color), 70%);
 }
 
 .content-section:hover {
     background-color: #12273c;
     color: white;
-    padding: 30px;
-    transition: all 0.3s ease;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
+.content-section h2 {
+    color: hsl(var(--base-color), 90%);
+}
+
+.content-section p {
+    color: hsl(var(--base-color), 65%); 
+}
+
+.content-section:hover h2,
+.content-section:hover p {
+    color: white; 
+}
 
 footer {
     margin-top: 20px;
     text-align: center;
-    border-top: 1px solid var(--base-color);
+    border-top: 1px solid hsl(var(--base-color), 100%);
     padding: 10px;
 }
